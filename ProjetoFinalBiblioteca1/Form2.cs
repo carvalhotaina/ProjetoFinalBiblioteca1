@@ -1,4 +1,4 @@
-﻿using ProjetoFinalBiblioteca;
+using ProjetoFinalBiblioteca;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +16,7 @@ namespace ProjetoFinalBiblioteca1
         public Form2()
         {
             InitializeComponent();
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -49,7 +50,12 @@ namespace ProjetoFinalBiblioteca1
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
-           
+            // Aqui você determina formulário de cadastro 
+            Form1 formCadastroPessoa = new Form1();
+            formCadastroPessoa.StartPosition = FormStartPosition.CenterScreen;
+            formCadastroPessoa.ShowDialog();
+            formCadastroPessoa.TopMost = true;
+            this.Hide();
         }
     }
 }
