@@ -1,4 +1,4 @@
-﻿using ProjetoFinalBiblioteca;
+using ProjetoFinalBiblioteca;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -61,6 +61,16 @@ namespace ProjetoFinalBiblioteca1
             comboBoxEbook.DataSource = Enum.GetValues(typeof(EnumEbookFormato));
             comboBoxEbook.SelectedIndex = 0;
 
+        }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            // Aqui você determina formulário de cadastro 
+            Form1 formCadastroExemplar = new Form1();
+            formCadastroExemplar.StartPosition = FormStartPosition.CenterScreen;
+            formCadastroExemplar.TopMost = true;
+            formCadastroExemplar.ShowDialog();
+            this.Hide();
         }
     }
 }
