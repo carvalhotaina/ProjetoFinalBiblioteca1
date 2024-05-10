@@ -11,65 +11,50 @@ using System.Windows.Forms;
 
 namespace ProjetoFinalBiblioteca1
 {
-    public partial class Form3 : Form
+    public partial class Form2 : Form
     {
-        public Form3()
+        public Form2()
         {
             InitializeComponent();
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
 
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDownAnoPub_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
+        private void Form2_Load(object sender, EventArgs e)
         {
             // carrega os valores do Enum para o combobox/Listbox
-            listBoxTipoGenerico.DataSource = Enum.GetValues(typeof(EnumGenericoTipo));
-            listBoxTipoGenerico.SelectedIndex = 0;
-            // carrega os valores do Enum para o combobox/Listbox
-            comboBoxTipoCapa.DataSource = Enum.GetValues(typeof(EnumExemplarTipoCapa));
-            comboBoxTipoCapa.SelectedIndex = 0;
-            // carrega os valores do Enum para o combobox/Listbox
-            comboBoxGenero.DataSource = Enum.GetValues(typeof(EnumExemplarGeneroTipo));
-            comboBoxGenero.SelectedIndex = 0;
-            // carrega os valores do Enum para o combobox/Listbox
-            comboBoxStatus.DataSource = Enum.GetValues(typeof(EnumExemplarStatus));
-            comboBoxStatus.SelectedIndex = 0;
-            // carrega os valores do Enum para o combobox/Listbox
-            comboBoxEbook.DataSource = Enum.GetValues(typeof(EnumEbookFormato));
-            comboBoxEbook.SelectedIndex = 0;
+            comboBoxCargo.DataSource = Enum.GetValues(typeof(EnumFuncionarioCargo));
+            comboBoxCargo.SelectedIndex = 0;
+            listBoxTipo.DataSource = Enum.GetValues(typeof(EnumTipoLeitor));
+            listBoxTipo.SelectedIndex = 0;
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxCargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
 
         private void buttonSalvar_Click(object sender, EventArgs e)
         {
             // Aqui você determina formulário de cadastro 
-            Form1 formCadastroExemplar = new Form1();
-            formCadastroExemplar.StartPosition = FormStartPosition.CenterScreen;
-            formCadastroExemplar.TopMost = true;
-            formCadastroExemplar.ShowDialog();
+            Form1 formCadastroPessoa = new Form1();
+            formCadastroPessoa.StartPosition = FormStartPosition.CenterScreen;
+            formCadastroPessoa.ShowDialog();
+            formCadastroPessoa.TopMost = true;
             this.Hide();
         }
     }
